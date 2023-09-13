@@ -59,12 +59,12 @@ const Header = () => {
                     </div>
                     <div className=' ml-auto px-4'>
                         {!isMenuOpen && (
-                            <div className="h-10 w-10 rounded-full bg-gray-200 flex justify-center items-center relative">
+                            <Link href={"/cart"} className="h-10 w-10 rounded-full bg-gray-200 flex justify-center items-center relative">
                             <span className="absolute right-1 top-0 rounded-full bg-red-500 h-5 w-4 text-white text-sm text-center">
                              {cartValue}
                             </span>
                             <AiFillShopping size={30}/>
-                          </div>
+                          </Link>
                         )}
                     </div>
                 </nav>

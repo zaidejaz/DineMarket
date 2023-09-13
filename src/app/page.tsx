@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import { Button } from "../../components/ui/button"
 import { Input } from '../../components/ui/input';
-// import SimpleSlider from './slider/page';
+import SimpleSlider from '@/components/Slider';
 import { AiFillShopping } from 'react-icons/ai'
 const Home = () => {
   return (
@@ -115,7 +115,7 @@ const Home = () => {
           </h2>
         </div>
         <div>
-          {/* <SimpleSlider /> */}
+          <SimpleSlider />
         </div>
       </section>
       <section className='flex flex-col min-h-screen mt-10 overflow-hidden space-y-8 w-[80vw] mx-auto'>
