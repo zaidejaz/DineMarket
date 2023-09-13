@@ -39,7 +39,7 @@ const Productpage = ({ params }: { params: { id: string } }) => {
   return (
     <>
       {product.map((item: any) => (
-        <div className="text-gray-600 body-font overflow-hidden" key={item._id}>
+        <div className="text-gray-600 body-font overflow-hidden" key={item.id}>
           <div className="container px-5 py-24 mx-auto">
             <div className="lg:w-4/5 mx-auto flex flex-wrap">
               <Image

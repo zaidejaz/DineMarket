@@ -3,14 +3,14 @@ import React from "react";
 import { Button } from "../../components/ui/button";
 import { useDispatch } from "react-redux";
 import { cartActions } from "@/store/slice/cartSlice";
-const addToCartButton = ({
+const AddToCartButton = ({
   quantity,
   price,
   productId,
   productName,
   productImage,
-  size, 
-  type
+  size,
+  type,
 }: {
   quantity: number;
   price: number;
@@ -20,18 +20,26 @@ const addToCartButton = ({
   size: string;
   type: string;
 }) => {
-  const dispatch = useDispatch();
-  const AddToCart = () => {
+  const addToCart = () => {
+    const dispatch = useDispatch();
     dispatch(
       cartActions.addToCart({
         quantity: quantity,
         price: price,
-        item: { id: productId, name: productName, productImage: productImage, price: price, size: size,  quantity: quantity, type: type},
+        item: {
+          id: productId,
+          name: productName,
+          productImage: productImage,
+          price: price,
+          size: size,
+          quantity: quantity,
+          type: type,
+        },
       })
     );
   };
 
-  return <Button onClick={AddToCart}>Add To Cart</Button>;
+  return <Button onClick={addToCart}>Add To Cart</Button>;
 };
 
-export default addToCartButton;
+export default AddToCartButton;
