@@ -21,7 +21,7 @@ const addToCartButton = ({
   type: string;
 }) => {
   const dispatch = useDispatch();
-  const addToCart = () => {
+  const AddToCart = () => {
     dispatch(
       cartActions.addToCart({
         quantity: quantity,
@@ -31,7 +31,7 @@ const addToCartButton = ({
     );
   };
 
-  return <Button onClick={addToCart}>Add To Cart</Button>;
+  return <Button onClick={AddToCart}>Add To Cart</Button>;
 };
 
 export default addToCartButton;

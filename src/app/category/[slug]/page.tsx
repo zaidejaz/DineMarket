@@ -1,9 +1,11 @@
 "use client"
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { getProducts } from "../../../../sanity/lib/query";
-const productByCategory = ({ params }: { params: { slug: string } }) => {
+
+
+const ProductByCategory = ({ params }: { params: { slug: string } }) => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
     async function fetchProducts() {
@@ -46,4 +48,4 @@ const productByCategory = ({ params }: { params: { slug: string } }) => {
   );
 };
 
-export default productByCategory;
+export default ProductByCategory;
