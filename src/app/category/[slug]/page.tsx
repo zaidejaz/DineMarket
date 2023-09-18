@@ -10,17 +10,19 @@ const ProductByCategory = ({ params }: { params: { slug: string } }) => {
   useEffect(() => {
     async function fetchProducts() {
       const products = await getProducts(params.slug);
-      console.log(products);
       setProducts(products);
     }
     fetchProducts();
   }, [params.slug]);
+
+
+  console.log(products);
   return (
     <>
       <div className="product-card grid grid-cols-1 md:grid-cols-2 md:gap-4 w-9/12 mx-auto mt-16 lg:w-[11/12] lg:grid-cols-4">
         {products.length > 0 ? (
           products.map((product: any) => (
-            <Link href={`/product/${product.slug.current}`} key={product.id}>
+            <Link key={product._id} href={`/product/${product.slug.current}`}>
               <div className="product-card space-y-2 mb-6">
                 <Image
                   src={product.image}

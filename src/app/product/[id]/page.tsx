@@ -26,6 +26,7 @@ const Productpage = ({ params }: { params: { id: string } }) => {
   useEffect(() => {
     async function fetchProducts() {
       const product = await getProduct(params.id);
+      console.log(product)
       setProduct(product);
       setPrice(product[0].price);
       setProductId(product[0]._id);
@@ -35,11 +36,12 @@ const Productpage = ({ params }: { params: { id: string } }) => {
     }
     fetchProducts();
   }, [params.id]);
-
+  
+console.log(product)
   return (
     <>
       {product.map((item: any) => (
-        <div className="text-gray-600 body-font overflow-hidden" key={item.id}>
+        <div className="text-gray-600 body-font overflow-hidden" key={item._id}>
           <div className="container px-5 py-24 mx-auto">
             <div className="lg:w-4/5 mx-auto flex flex-wrap">
               <Image

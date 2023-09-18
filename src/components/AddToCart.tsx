@@ -20,8 +20,8 @@ const AddToCartButton = ({
   size: string;
   type: string;
 }) => {
+  const dispatch = useDispatch();
   const addToCart = () => {
-    const dispatch = useDispatch();
     dispatch(
       cartActions.addToCart({
         quantity: quantity,
