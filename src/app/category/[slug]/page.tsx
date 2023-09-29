@@ -14,9 +14,6 @@ const ProductByCategory = ({ params }: { params: { slug: string } }) => {
     }
     fetchProducts();
   }, [params.slug]);
-
-
-  console.log(products);
   return (
     <>
       <div className="product-card grid grid-cols-1 md:grid-cols-2 md:gap-4 w-9/12 mx-auto mt-16 lg:w-[11/12] lg:grid-cols-4">

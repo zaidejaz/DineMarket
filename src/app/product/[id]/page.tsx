@@ -70,7 +70,7 @@ const Productpage = ({ params }: { params: { id: string } }) => {
                         </SelectTrigger>
                         <SelectContent>
                           {item.sizes.map((size: any) => (
-                            <SelectItem value={size}>{size}</SelectItem>
+                            <SelectItem value={size} key={size}>{size}</SelectItem>
                           ))}
                         </SelectContent>
                       </Select>
