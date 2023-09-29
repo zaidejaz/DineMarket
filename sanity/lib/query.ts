@@ -26,7 +26,7 @@ export const getProducts = async (category: string) => {
 
 export const getProduct = async (slug: string) => {
   const product = await client.fetch(
-    `*[_type == "products" && slug == "${slug}"]{
+    `*[_type == "products" && slug.current == "${slug}"]{
         _id,
         name,
         slug,

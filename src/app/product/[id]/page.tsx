@@ -22,26 +22,25 @@ const Productpage = ({ params }: { params: { id: string } }) => {
   const [productName, setProductName] = useState("");
   const [productImage, setProductImage] = useState("");
   const [type, setType] = useState("");
-
+  console.log(params.id)
   useEffect(() => {
-    async function fetchProducts() {
-      const product = await getProduct(params.id);
-      console.log(product)
-      setProduct(product);
-      setPrice(product[0].price);
-      setProductId(product[0]._id);
-      setProductName(product[0].name);
-      setProductImage(product[0].image);
-      setType(product[0].type);
+    async function fetchProduct() {
+      const theProduct = await getProduct(params.id);
+      console.log(theProduct)
+      setProduct(theProduct);
+      setPrice(theProduct[0].price);
+      setProductId(theProduct[0]._id);
+      setProductName(theProduct[0].name);
+      setProductImage(theProduct[0].image);
+      setType(theProduct[0].type);
     }
-    fetchProducts();
+    fetchProduct();
   }, [params.id]);
-  
-console.log(product)
+
   return (
     <>
       {product.map((item: any) => (
-        <div className="text-gray-600 body-font overflow-hidden" key={item._id}>
+        <div className="text-gray-600 body-font overflow-hidden" key={item.slug.current}>
           <div className="container px-5 py-24 mx-auto">
             <div className="lg:w-4/5 mx-auto flex flex-wrap">
               <Image

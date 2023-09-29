@@ -4,7 +4,7 @@ import { Input } from '../../../components/ui/input'
 
 const Newsletter = () => {
   return (
-<section className="newsletter w-[80vw] mx-auto flex flex-col items-center justify-center overflow-hidden min-h-screen space-y-5 md:min-h-[30vh]">
+<section className="newsletter w-[80vw] mx-auto flex flex-col items-center justify-center overflow-hidden min-h-screen space-y-5">
         <div className='flex flex-col jusitfy-center items-center'>
           <h2 className="scroll-m-20 text-5xl font-semibold tracking-tight transition-colors first:mt-0">
             Subscribe our Newsletter

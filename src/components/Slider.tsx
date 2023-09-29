@@ -38,20 +38,12 @@ export default function SimpleSlider() {
     slidesToScroll: 4,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 950,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
           dots: true,
-        },
-      },
-      {
-        breakpoint: 950,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
         },
       },
       {
@@ -64,7 +56,7 @@ export default function SimpleSlider() {
     ],
   };
   return (
-    <div className="w-[80vw] mx-auto">
+    <div className="w-[80vw] mx-auto items-center">
       <Slider {...settings}>
         {products.length > 0 &&
           products.map((product:Product) => (
@@ -78,7 +70,7 @@ export default function SimpleSlider() {
                 />
                 <p className="leading-5 text-black font-bold">{product.name}</p>
                 <p className="leading-5 text-black font-bold">
-                  {product.price}
+                  $ {product.price}
                 </p>
               </div>
             </Link>

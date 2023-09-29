@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 const About = () => {
   return (
-    <section className='flex flex-col min-h-screen mt-10 overflow-hidden space-y-8 w-[80vw] mx-auto'>
+    <section className='flex flex-col min-h-screen mt-10 overflow-hidden space-y-8 w-[80vw] mx-auto justify-center'>
     <div className='w-[80vw] mx-auto lg:w-[30vw] lg:mx-0 lg:ml-auto'>
       <h2 className="text-5xl font-bold tracking-tight transition-colors">
         Unique and Authentic Vintage Designer Jewellery
